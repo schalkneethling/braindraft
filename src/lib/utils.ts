@@ -1,6 +1,6 @@
 export const titleToSlug = (title: string) => {
-	const nonWordMatcher = /[^\w]+/g;
-	let formatted = title.toLowerCase().replace(nonWordMatcher, '-');
+	const nonWordCharacterMatcher = /[^\w]+/g;
+	let formatted = title.toLowerCase().replace(nonWordCharacterMatcher, '-');
 
 	if (formatted.startsWith('-')) {
 		formatted = formatted.slice(1);

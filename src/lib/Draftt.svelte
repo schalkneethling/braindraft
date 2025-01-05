@@ -1,12 +1,13 @@
 <script lang="ts">
-	import {onMount} from 'svelte';
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
-	import type { ContentItem } from '$lib/types';
+	import type { DraftItem } from '$lib/types';
 
-	import ContentForm from '$lib/ContentForm.svelte';
+	import Card from '$lib/Card.svelte';
+	import DraftForm from '$lib/DraftForm.svelte';
 
-	let { contentItems }: { contentItems: ContentItem[] } = $props();
+	let { draftItems }: { draftItems: DraftItem[] } = $props();
 	let showForm = $state(false);
 
 	onMount(() => {
@@ -16,7 +17,6 @@
 			}
 		});
 	});
-
 </script>
 
 <article>
@@ -25,22 +25,22 @@
 
 		<div class="button-wrapper">
 			<button class="button outline" type="button" onclick={() => (showForm = !showForm)}>
-				{showForm ? 'Hide' : 'Add'} Content Form
+				{showForm ? 'Hide' : 'Add'} Draft Form
 			</button>
 		</div>
 	</header>
 
 	{#if showForm}
 		<div transition:slide>
-			<ContentForm />
+			<DraftForm />
 		</div>
 	{/if}
 
-	{#if contentItems.length > 0}
-		<ul>
-			{#each contentItems as contentItem}
+	{#if draftItems.length > 0}
+		<ul class="reset-list draft-list">
+			{#each draftItems as draftItem}
 				<li>
-					<a href={`draft/${contentItem.slug}`}>{contentItem.title}</a>
+					<Card draft={draftItem} />
 				</li>
 			{/each}
 		</ul>
