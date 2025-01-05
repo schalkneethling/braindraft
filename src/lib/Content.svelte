@@ -40,12 +40,12 @@
 		<ul>
 			{#each contentItems as contentItem}
 				<li>
-					{contentItem.title}
+					<a href={`draft/${contentItem.slug}`}>{contentItem.title}</a>
 				</li>
 			{/each}
 		</ul>
 	{:else}
-		<p>No content items found.</p>
+		<p>No drafts found.</p>
 	{/if}
 </article>
 
