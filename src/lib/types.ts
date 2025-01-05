@@ -1,6 +1,6 @@
-export type ContentItem = {
-	contentStatus: string;
-	contentType: string;
+export type DraftItem = {
+	draftStatus: string;
+	draftType: string;
 	notes: string;
 	publishDate: string;
 	slug: string;
@@ -8,6 +8,6 @@ export type ContentItem = {
 	title: string;
 };
 
-export type ContentItemsContext = {
-	addContentItem: (contentItem: FormData) => void;
+export type DraftItemsContext = {
+	addDraftItem: (drafttItem: FormData) => void;
 };

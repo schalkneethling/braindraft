@@ -3,7 +3,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	const { contentItem } = data;
+	const { draftItem } = data;
 </script>
 
-<h1>{contentItem.title}</h1>
+<h1>{draftItem.title}</h1>
