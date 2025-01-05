@@ -3,6 +3,7 @@ export type ContentItem = {
 	contentType: string;
 	notes: string;
 	publishDate: string;
+	slug: string;
 	tags?: string[];
 	title: string;
 };

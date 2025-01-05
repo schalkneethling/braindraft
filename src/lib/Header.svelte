@@ -1,1 +1,3 @@
-<h1>🧠 BrainDraft</h1>
+<h1>
+    <a href="/">🧠 BrainDraft</a>
+</h1>

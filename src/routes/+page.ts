@@ -10,8 +10,7 @@ export const load: PageLoad = () => {
 		const response = localStorage.getItem('braindrafts');
 
 		if (response) {
-			const parsedResponse = JSON.parse(response);
-			contentItems = Object.entries(parsedResponse).map(([, value]) => value) as ContentItem[];
+			contentItems = JSON.parse(response);
 		}
 	} catch (error) {
 		throw new Error(`Failed to load content items: ${error}`);
