@@ -2,11 +2,12 @@
 	import Header from '$lib/Header.svelte';
 
 	import '../styles/minimalist/minimalist.css';
+	import '../styles/braindraft.css';
 
 	let { children } = $props();
 </script>
 
-<div class="readable-line-length">
+<div class="app-container">
 	<Header />
 
 	{@render children()}

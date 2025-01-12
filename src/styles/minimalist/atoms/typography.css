@@ -3,7 +3,7 @@
 .heading-xl,
 .heading-large,
 .heading-medium,
-.heading-small-mediium,
+.heading-small-medium,
 caption,
 h1,
 h2,
@@ -26,28 +26,28 @@ body {
   font-size: var(--typography-size-display);
 }
 
-.heading-xxl,
-h1 {
+h1,
+.heading-xxl {
   font-size: var(--typography-size-xxl);
 }
 
-.heading-xl,
-h2 {
+h2,
+.heading-xl {
   font-size: var(--typography-size-xl);
 }
 
-.heading-large,
-h3 {
+h3,
+.heading-large {
   font-size: var(--typography-size-large);
 }
 
-.heading-medium,
-h4 {
+h4,
+.heading-medium {
   font-size: var(--typography-size-medium);
 }
 
-.heading-small-medium,
-h5 {
+h5,
+.heading-small-medium {
   font-size: var(--typography-size-small-medium);
 }
 
