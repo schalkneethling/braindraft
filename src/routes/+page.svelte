@@ -5,7 +5,7 @@
 	import type { DraftItem, DraftItemsContext } from '$lib/types';
 
 	import {titleToSlug} from '$lib/utils';
-	import Draft from '$lib/Draftt.svelte';
+	import Draft from '$lib/Draft.svelte';
 
 	let { data }: { data: PageData } = $props();
 	let draftItems = $state(data.draftItems);

@@ -39,7 +39,7 @@
 	{#if draftItems.length > 0}
 		<ul class="reset-list draft-list">
 			{#each draftItems as draftItem}
-				<li>
+				<li class="draft-list-entry">
 					<Card draft={draftItem} />
 				</li>
 			{/each}
@@ -58,5 +58,15 @@
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.draft-list {
+		display: flex;
+		gap: var(--size-16);
+		margin-block-start: var(--size-32);
+	}
+
+	.draft-list-entry {
+		flex: 1 1 calc(100vw / 4);
 	}
 </style>

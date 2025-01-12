@@ -15,8 +15,8 @@ export const load: PageLoad = ({ params }) => {
 			error(404, 'No content found in storage');
 		}
 
-		const contentItems = JSON.parse(response) as DraftItem[];
-		draftItem = contentItems.find((contentItem) => contentItem.slug === params.slug);
+		const draftItems = JSON.parse(response) as DraftItem[];
+		draftItem = draftItems.find((contentItem) => contentItem.slug === params.slug);
 
 		if (!draftItem) {
 			error(404, `Content item not found: ${params.slug}`);

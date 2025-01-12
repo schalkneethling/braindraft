@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { getContext, onMount } from 'svelte';
 
-	import type { ContentItemsContext } from '$lib/types';
+	import type { DraftItemsContext } from '$lib/types';
 
-	const context = getContext('contentItems') as ContentItemsContext;
+	const context = getContext('draftItems') as DraftItemsContext;
 
 	const handleSubmit = (event: Event) => {
 		event.preventDefault();
 		const target = event.target as HTMLFormElement;
 
-		context.addContentItem(new FormData(target));
+		context.addDraftItem(new FormData(target));
 	};
 
 	onMount(() => {
